@@ -1,0 +1,43 @@
+{
+  "name": "coronupdate",
+  "version": "1.0.0",
+  "description": "Keeping you updated with the latest news and statistics on Covid19",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --linux",
+    "package-linux": "electron-packager .  coronupdate --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/android-chrome-256x256.png --prune=true --out=release-builds",
+    "create-debian-installer": "electron-installer-debian --src release-builds/coronupdate-linux-x64/ --arch amd64 --config debian.json",
+    "create-snap-installer": "electron-installer-snap --src release-builds/coronupdate-linux-x64/"
+  },
+  "author": "Maximilian Vogt",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://coronupdate.mavodev.de",
+  "dependencies": {
+    "electron-window-state": "^5.0.3"
+  },
+  "devDependencies": {
+    "electron": "^9.1.0",
+    "electron-builder": "^22.7.0",
+    "electron-installer-snap": "^5.1.0",
+    "electron-packager": "^15.0.0",
+    "electron-window-state": "^5.0.3"
+  },
+  "build": {
+    "extends": null,
+    "appId": "com.mavodev.coronupdate",
+    "artifactName": "CoronUpdate-${version}.${ext}",
+    "productName": "CoronUpdate",
+    "linux": {
+      "icon": "assets/android-chrome-256x256.png",
+      "category": "Utility"
+    },
+    "snap": {},
+    "pacman": {
+      "compression": "xz"
+    },
+    "directories": {
+      "output": "release"
+    }
+  }
+}

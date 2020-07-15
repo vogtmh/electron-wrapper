@@ -1,0 +1,13 @@
+{
+  "dest": "release-builds/",
+  "icon": "assets/android-chrome-256x256.png",
+  "options.productName": "CoronUpdate Desktop",
+  "options.description": "Electron app for https://coronupdate.mavodev.de",
+  "options.productDescription": "Electron app for https://coronupdate.mavodev.de. Basically a simple wrapper calling the remote URL, so you can add it to your toolbars in Gnome.",
+  "categories": [
+    "Utility"
+  ],
+  "lintianOverrides": [
+    "changelog-file-missing-in-native-package"
+  ]
+}
