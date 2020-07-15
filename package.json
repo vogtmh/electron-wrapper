@@ -5,10 +5,9 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder --linux",
-    "package-linux": "electron-packager .  coronupdate --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/android-chrome-256x256.png --prune=true --out=release-builds",
-    "create-debian-installer": "electron-installer-debian --src release-builds/coronupdate-linux-x64/ --arch amd64 --config debian.json",
-    "create-snap-installer": "electron-installer-snap --src release-builds/coronupdate-linux-x64/"
+    "create-snap": "electron-builder --linux",
+    "create-binary": "electron-packager .  coronupdate --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/android-chrome-256x256.png --prune=true --out=release-builds",
+    "create-debian": "electron-installer-debian --src release-builds/coronupdate-linux-x64/ --arch amd64 --config debian.json"
   },
   "author": "Maximilian Vogt",
   "license": "GPL-3.0-or-later",
@@ -19,7 +18,7 @@
   "devDependencies": {
     "electron": "^9.1.0",
     "electron-builder": "^22.7.0",
-    "electron-installer-snap": "^5.1.0",
+    "electron-installer-debian": "^3.1.0",
     "electron-packager": "^15.0.0",
     "electron-window-state": "^5.0.3"
   },

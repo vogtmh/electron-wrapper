@@ -3,9 +3,9 @@ Electron packager for webapps. Creates Electron packages for Debian Linux. Curre
 Commands:
 
 *  Initialize node modules: npm install
-*  Create Snap package for Arch: npm dist
-*  Create Electron binaries: npm run package-linux
-*  Create debian package out of the binaries: npm run create-debian-installer
+*  Create Snap package for Arch: npm run create-snap
+*  Create Electron binaries: npm run create-binary
+*  Create debian package out of the binaries: npm run create-debian
 *  Run app only: npm start
 
 Web resources:
